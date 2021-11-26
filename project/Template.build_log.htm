@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: michael mycomputer, mycomputer, LIC=QF82M-XAN8F-LQ70Q-NNR53-3ITFL-PC5CP
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.30.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+F:\CodeField\STM32_Project\STM32OLED\project\OLED96.uvprojx
+Project File Date:  11/26/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+..\user\api\io_bit.h(4): warning:  #47-D: incompatible redefinition of macro "BITBAND"  (declared at line 23 of "..\user\api\usart\sys.h")
+  #define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr&0xFFFFF)<<5)+(bitnum<<2))
+..\user\api\io_bit.h(8): warning:  #47-D: incompatible redefinition of macro "GPIOA_ODR_Addr"  (declared at line 27 of "..\user\api\usart\sys.h")
+  #define GPIOA_ODR_Addr (GPIOA_BASE+0x0C) //0x40020014
+..\user\api\io_bit.h(9): warning:  #47-D: incompatible redefinition of macro "GPIOB_ODR_Addr"  (declared at line 28 of "..\user\api\usart\sys.h")
+  #define GPIOB_ODR_Addr (GPIOB_BASE+0x0C) //0x40020414 
+..\user\api\io_bit.h(10): warning:  #47-D: incompatible redefinition of macro "GPIOC_ODR_Addr"  (declared at line 29 of "..\user\api\usart\sys.h")
+  #define GPIOC_ODR_Addr (GPIOC_BASE+0x0C) //0x40020814
+..\user\api\io_bit.h(11): warning:  #47-D: incompatible redefinition of macro "GPIOD_ODR_Addr"  (declared at line 30 of "..\user\api\usart\sys.h")
+  #define GPIOD_ODR_Addr (GPIOD_BASE+0x0C) //0x40020C14
+..\user\api\io_bit.h(12): warning:  #47-D: incompatible redefinition of macro "GPIOE_ODR_Addr"  (declared at line 31 of "..\user\api\usart\sys.h")
+  #define GPIOE_ODR_Addr (GPIOE_BASE+0x0C) //0x40021014
+..\user\api\io_bit.h(13): warning:  #47-D: incompatible redefinition of macro "GPIOA_IDR_Addr"  (declared at line 35 of "..\user\api\usart\sys.h")
+  #define GPIOA_IDR_Addr (GPIOA_BASE+0x08) //0x40020010
+..\user\api\io_bit.h(14): warning:  #47-D: incompatible redefinition of macro "GPIOB_IDR_Addr"  (declared at line 36 of "..\user\api\usart\sys.h")
+  #define GPIOB_IDR_Addr (GPIOB_BASE+0x08) //0x40020410
+..\user\api\io_bit.h(15): warning:  #47-D: incompatible redefinition of macro "GPIOC_IDR_Addr"  (declared at line 37 of "..\user\api\usart\sys.h")
+  #define GPIOC_IDR_Addr (GPIOC_BASE+0x08) //0x40020810
+..\user\api\io_bit.h(16): warning:  #47-D: incompatible redefinition of macro "GPIOD_IDR_Addr"  (declared at line 38 of "..\user\api\usart\sys.h")
+  #define GPIOD_IDR_Addr (GPIOD_BASE+0x08) //0x40020C10
+..\user\api\io_bit.h(17): warning:  #47-D: incompatible redefinition of macro "GPIOE_IDR_Addr"  (declared at line 39 of "..\user\api\usart\sys.h")
+  #define GPIOE_IDR_Addr (GPIOE_BASE+0x08) //0x40021010
+..\user\api\oled.h(18): warning:  #1295-D: Deprecated declaration fast_clear - give arg types
+  void fast_clear();
+..\user\main.c(2): warning:  #1295-D: Deprecated declaration showMyName - give arg types
+  void showMyName();
+..\user\main.c(3): warning:  #1295-D: Deprecated declaration showHello - give arg types
+  void showHello();
+..\user\main.c(4): warning:  #1295-D: Deprecated declaration showSong - give arg types
+  void showSong();
+..\user\main.c(14): warning:  #177-D: variable "buf1"  was declared but never referenced
+  	char buf1[] = {"There is only"};
+..\user\main.c(15): warning:  #177-D: variable "buf2"  was declared but never referenced
+  	char buf2[] = {"word."};
+..\user\main.c(16): warning:  #177-D: variable "author"  was declared but never referenced
+  	char author[] = {"Qing"};
+..\user\main.c: 18 warnings, 0 errors
+linking...
+Program Size: Code=2524 RO-data=268 RW-data=5840 ZI-data=1832  
+FromELF: creating hex file...
+".\Template.axf" - 0 Error(s), 18 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.0.0.pack
+                Keil.STM32F1xx_DFP.2.0.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  D:\Keil_v5\Arm\Packs\Keil\STM32F1xx_DFP\2.0.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
